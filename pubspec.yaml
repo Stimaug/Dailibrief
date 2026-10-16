@@ -1,0 +1,41 @@
+name: dailybrief
+description: "DailyBrief - Get Daily Information. Suara hari ini, informasi untukmu."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # Voice input (Use case: Memberikan perintah melalui suara)
+  speech_to_text: ^7.5.0
+
+  # Voice output (Use case: Mendengarkan jawaban dari sistem)
+  flutter_tts: ^4.0.2
+
+  # Location (Use case: Mendapatkan informasi lokasi) - posisi GPS via
+  # geolocator; alamat sampai jalan via OpenStreetMap Nominatim (gratis).
+  geolocator: ^14.0.3
+
+  # HTTP: prakiraan cuaca BMKG (api.bmkg.go.id), daftar kode wilayah
+  # (emsifa api-wilayah-indonesia), Nominatim, dan Open-Meteo (prakiraan
+  # jangka panjang, arsip historis, geocoding).
+  http: ^1.2.2
+
+  # Permission handling (microphone, location)
+  permission_handler: ^13.0.2
+
+  # Local date/day formatting in Bahasa Indonesia
+  intl: ^0.20.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
