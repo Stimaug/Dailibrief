@@ -674,6 +674,14 @@ class CommandService {
       'sekarang di mana',
       'sedang dimana',
       'sedang di mana',
+      'lokasi saya',
+      'posisi saya',
+      'lokasi aku',
+      'posisi aku',
+      'lokasi saat ini',
+      'posisi saat ini',
+      'lokasi ini',
+      'posisi ini',
     ];
     return phrases.any(text.contains);
   }
@@ -718,6 +726,17 @@ class CommandService {
       'anda',
       'ini',
       'itu',
+      // Kata penunjuk waktu/keadaan: "lokasi saya saat ini" tidak boleh
+      // meninggalkan kata "saat" sebagai nama tempat.
+      'saat',
+      'sekarang',
+      'sedang',
+      'berada',
+      'lagi',
+      'di',
+      'nih',
+      'dong',
+      'ya',
     };
     final tokens = t
         .trim()
